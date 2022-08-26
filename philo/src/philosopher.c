@@ -18,7 +18,6 @@ int	ft_get_philos(t_monitor *monitor)
 										monitor->nbr_of_philo);
 	if (!monitor->philos)
 		return (1);
-
 	return (0);
 }
 

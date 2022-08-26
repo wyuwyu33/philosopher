@@ -47,7 +47,6 @@ int	death_check(t_monitor *monitor, int i_philo, long long current_time)
 	t_philo	*philo;
 
 	philo = monitor->philos;
-
 	pthread_mutex_lock(&philo[i_philo].lock_meal);
 	if (current_time >= \
 			monitor->time_to_die + monitor->philos[i_philo].last_meal_time)
@@ -75,7 +74,6 @@ void	*ft_monitor_routine(void *arg)
 				return (NULL);
 			i_philo++;
 		}
-		usleep(100);
 	}
 	return (NULL);
 }

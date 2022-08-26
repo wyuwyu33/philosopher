@@ -15,7 +15,6 @@
 static
 void	ft_taking_forks(t_philo *philo)
 {
-
 	pthread_mutex_lock(philo->first);
 	pthread_mutex_lock(philo->lock_print);
 	ft_print(philo, "has taken a fork");
@@ -88,7 +87,7 @@ void	*ft_philo_routine(void *arg)
 			return (NULL);
 		ft_sleeping(philo);
 		ft_thinking(philo);
-		usleep(500);
+		usleep(400);
 	}
 	return (NULL);
 }
